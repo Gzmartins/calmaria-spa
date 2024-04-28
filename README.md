@@ -4,6 +4,7 @@
 # Linguagens usadas 🤖  
  * HTML
  * CSS
+ * SCSS
 
 # Link da página
 [Clique aqui](https://gzmartins.github.io/calmaria-spa/)
