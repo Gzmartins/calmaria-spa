@@ -1,0 +1,80 @@
+@use'../abstract/variaveis';
+@use '../abstract/mixins';
+
+#contatos {
+    @include mixins.margem-central(80%);
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-bottom: 4rem;
+
+    .contatos-imgs {
+        max-width: 50%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .contatos-form {
+        max-width: 50%;
+        background: variaveis.$gradiante;
+        padding: 2rem 3rem;
+        border-radius: 48px;
+
+        .titulo {
+            @include mixins.ff-fs-cl(variaveis.$fonte-titulos, 1.6rem, variaveis.$roxo-secundario);
+            font-weight: 400;
+        }
+
+        .infos {
+            @include mixins.ff-fs-cl(variaveis.$fonte-textos, 1.2rem, variaveis.$roxo-principal);
+        }
+
+        .inputs {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .form-group {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            gap: 8px;
+
+            label {
+                @include mixins.ff-fs-cl(variaveis.$fonte-textos, 1rem, variaveis.$roxo-principal);
+                font-weight: 600;
+            }
+
+            input {
+                border-radius: 25px;
+                background-color: #fffffc98;
+                padding-left: 1rem;
+                padding: 1rem;
+                border: none;
+                outline: none;
+            }
+
+            textarea {
+                @extend input;
+            }
+        }
+        .btn {
+            width: 487px;
+            border-radius: 40px;
+            padding: 1rem;
+            background: variaveis.$roxo-secundario;
+            font-weight: 600;
+            border: none;
+            outline: none;
+            transition: 0.3s;
+            @include mixins.ff-fs-cl(variaveis.$fonte-textos, 1.3rem, variaveis.$branco);
+            
+            &:hover {
+                background: variaveis.$roxo-terciario
+            }
+        }
+    }
+}

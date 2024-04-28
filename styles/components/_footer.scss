@@ -1,0 +1,12 @@
+@use '../abstract/variaveis';
+@use'../abstract/mixins'; 
+
+.rodape {
+    background: variaveis.$verde-primario;
+    @include mixins.ff-fs-cl(variaveis.$fonte-textos, 1rem, variaveis.$roxo-principal);
+    font-weight: 400;
+    height: 71px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
